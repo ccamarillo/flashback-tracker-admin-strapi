@@ -1,0 +1,76 @@
+{
+  "kind": "collectionType",
+  "collectionName": "flashbacks",
+  "info": {
+    "singularName": "flashback",
+    "pluralName": "flashbacks",
+    "displayName": "Flashback",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "maxLength": 255
+    },
+    "users_permissions_user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "cause": {
+      "type": "string"
+    },
+    "discussed_with_friend": {
+      "type": "boolean",
+      "default": false
+    },
+    "discussed_in_therapy": {
+      "type": "boolean",
+      "default": false
+    },
+    "discussed_in_group": {
+      "type": "boolean"
+    },
+    "spike_hours": {
+      "type": "integer"
+    },
+    "spike_minutes": {
+      "type": "integer"
+    },
+    "total_hours": {
+      "type": "integer"
+    },
+    "total_minutes": {
+      "type": "integer"
+    },
+    "description": {
+      "type": "text"
+    },
+    "actions": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::action.action"
+    },
+    "needs": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::need.need"
+    },
+    "triggers": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::trigger.trigger"
+    },
+    "checkins": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::checkin.checkin",
+      "mappedBy": "flashback"
+    }
+  }
+}

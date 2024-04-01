@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "processes",
+  "info": {
+    "singularName": "process",
+    "pluralName": "processes",
+    "displayName": "Process"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "notes": {
+      "type": "text"
+    },
+    "users_permissions_user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    }
+  }
+}

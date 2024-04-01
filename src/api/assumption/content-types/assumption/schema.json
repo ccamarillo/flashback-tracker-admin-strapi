@@ -1,0 +1,50 @@
+{
+  "kind": "collectionType",
+  "collectionName": "assumptions",
+  "info": {
+    "singularName": "assumption",
+    "pluralName": "assumptions",
+    "displayName": "Assumption",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "belief_factor": {
+      "type": "integer",
+      "max": 10,
+      "min": 0
+    },
+    "users_permissions_user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "notes": {
+      "type": "text"
+    },
+    "percieved_meaning": {
+      "type": "text"
+    },
+    "distortions": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::distortion.distortion"
+    },
+    "themes": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::theme.theme"
+    },
+    "checkins": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::checkin.checkin"
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "kind": "collectionType",
+  "collectionName": "actions",
+  "info": {
+    "singularName": "action",
+    "pluralName": "actions",
+    "displayName": "Action",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "In progress",
+        "To do",
+        "Done"
+      ],
+      "default": "To do",
+      "required": true
+    },
+    "flashbacks": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::flashback.flashback"
+    },
+    "parent_action": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::action.action"
+    },
+    "users_permissions_user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "notes": {
+      "type": "text"
+    },
+    "themes": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::theme.theme"
+    },
+    "checkins": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::checkin.checkin"
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "distortions",
+  "info": {
+    "singularName": "distortion",
+    "pluralName": "distortions",
+    "displayName": "Distortion",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "notes": {
+      "type": "text"
+    },
+    "users_permissions_user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "distortion_type": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::distortion-type.distortion-type"
+    },
+    "assumptions": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::assumption.assumption"
+    },
+    "themes": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::theme.theme"
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "triggers",
+  "info": {
+    "singularName": "trigger",
+    "pluralName": "triggers",
+    "displayName": "Trigger"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "notes": {
+      "type": "text"
+    },
+    "users_permissions_user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "wins",
+  "info": {
+    "singularName": "win",
+    "pluralName": "wins",
+    "displayName": "Win"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "users_permissions_user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "notes": {
+      "type": "text"
+    }
+  }
+}

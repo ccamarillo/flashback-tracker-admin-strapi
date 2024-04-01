@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "distortion_types",
+  "info": {
+    "singularName": "distortion-type",
+    "pluralName": "distortion-types",
+    "displayName": "DistortionType"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}
